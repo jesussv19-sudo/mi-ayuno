@@ -1,42 +1,28 @@
-MI AYUNO 3.0 — ENTREGA Y PRUEBAS
-23 de octubre de 2026
+MI AYUNO 3.1 — ACTUALIZACIÓN
 
-Aplicación estática gratuita, sin dependencias externas, cuentas ni claves API.
-No se recuperó un ZIP 2.0 de la conversación; esta versión se construyó desde cero.
+NUEVO
+En Registrar aparece ¿Qué comiste? Escribe, por ejemplo:
+- Desayuné una taza de avena con leche.
+- Comí dos huevos y un pan.
+- Tomé un café con dos cucharaditas de azúcar.
+- Comí 150 g de pollo y 100 g de arroz.
 
-CONTENIDO
-mi-ayuno-3/: archivos completos para publicar. GUIA.html incluye instrucciones de publicación gratuita con GitHub Pages e instalación en Samsung, fuentes, privacidad y límites.
-Los datos de prueba usados en el navegador NO se incluyen en el ZIP: una instalación nueva comienza vacía.
+Pulsa Estimar mi comida. Revisa los ingredientes, corrige los gramos/ml y responde sobre azúcar cuando se solicite. Confirma la revisión y guarda. La fecha/hora se elige en el formulario, no se deduce de la frase.
 
-PRUEBAS REALIZADAS
-- Sintaxis de JavaScript comprobada.
-- 9 verificaciones automáticas: fórmulas masculina/femenina, actividad y déficit, proteína, gramos y porciones, tildes y desconocidos, cronómetro, variación educativa, recursos offline, manifiesto e iconos PNG.
-- Navegador: perfil ficticio 80 kg / 175 cm / 30 años / masculino / sedentario: 1749 kcal reposo, 2099 mantenimiento, 1889 objetivo con déficit 10 %, 96 g proteína.
-- 200 g arroz cocido: 260 kcal / 5.4 g proteína. Saldo 1629 kcal.
-- Caminata 30 min: estimación 147 kcal; sin aumentar saldo de comida.
-- Registro de agua y peso visible en diario y gráficos.
-- Ayuno, recarga y persistencia, cambio a alimentación y cierre de ventanas con historial.
-- Copia JSON descargada y restaurada tras confirmación.
-- Servidor detenido: recarga desde service worker y registro de agua exitosos.
-- Actualización del caché y comprobación del texto específico de alimentación.
-- Vista móvil 390 × 844 inspeccionada. Sin errores de consola registrados en la revisión final.
+Es gratuito y funciona sin internet con reglas y el catálogo de 29 alimentos. No es una IA general ni conoce todos los platos. Advierte sobre palabras no reconocidas; el total solo incluye los ingredientes mostrados. Las recetas, marcas y preparaciones pueden cambiar mucho la estimación. No se envían frases a servicios externos.
 
-LÍMITES DE VERIFICACIÓN
-No se probó en Samsung físico, no se verificó una instalación Android real ni entrega de notificaciones en el sistema operativo. La app no está publicada en una dirección pública; se entrega lista para publicar con los pasos de GUIA.html. Los avisos requieren permiso y ejecución de la app; no son alarmas fiables cerrada o suspendida. No hay servidor push.
+ACTUALIZAR LA APP QUE YA PUBLICASTE
+1. En tu celular, Mi perfil > Exportar copia JSON. Guarda esa copia de forma privada, sin subirla a GitHub.
+2. Descomprime Mi-Ayuno-3.1.zip en tu computadora.
+3. Abre tu repositorio mi-ayuno > Code > Add file > Upload files.
+4. Arrastra TODOS los archivos que están DENTRO de mi-ayuno-3; no arrastres la carpeta ni el ZIP.
+5. Pulsa Commit changes para reemplazar los anteriores. Comprueba que parser.js aparece junto a index.html.
+6. En Actions espera la marca verde de pages build and deployment.
+7. En el celular abre la misma app con conexión, ciérrala completamente y vuelve a abrirla. Puede necesitar una segunda apertura para activar el nuevo caché. La cabecera debe mostrar 3.1.
+8. No desinstales ni borres datos. Se utiliza la misma dirección y la misma clave de almacenamiento, de modo que la actualización mantiene el perfil e historial. Si sigue apareciendo 3.0, cierra todas las pestañas de esa dirección y abre de nuevo con conexión; no borres los datos del sitio.
 
-NUTRICIÓN
-Catálogo de 29 alimentos simples con estimaciones orientativas y editables. Desconocidos y recetas requieren valores manuales. No es reconocimiento libre de platos ni IA nutricional. Explicaciones educativas, sin mediciones fisiológicas.
+PRUEBAS
+12 pruebas automáticas del intérprete: frase con errores, porciones múltiples, unidades, sin azúcar, azúcar explícita, cantidades posteriores, avena seca frente a preparada, advertencias de desconocidos, negación y medio litro. Más 9 comprobaciones anteriores de cálculos/PWA.
+Navegador: frase original interpretada, 40 g avena + 200 ml leche = aproximadamente 278 kcal / 13.2 g proteína. Cambiar leche a 100 ml actualiza a 217 kcal / 10 g. Añadir 8 g azúcar actualiza a 309 kcal / 13.2 g. Confirmación obligatoria verificada y guardado visible en el diario, sumando el saldo correctamente. La actualización conservó los datos ficticios existentes de la vista previa.
 
-PUBLICACIÓN RÁPIDA
-1. Descomprime el ZIP.
-2. Crea repositorio público mi-ayuno en GitHub.
-3. Sube TODOS los archivos dentro de mi-ayuno-3 a la raíz del repositorio.
-4. Settings > Pages > Deploy from a branch > main > / (root) > Save.
-5. Abre la dirección HTTPS publicada desde Chrome en Samsung.
-6. Menú ⋮ > Añadir a pantalla de inicio > Instalar.
-7. Abre una vez con conexión; después prueba modo avión.
-
-GitHub Pages gratuito para repositorios públicos:
-https://docs.github.com/en/pages/quickstart
-Límites de segundo plano:
-https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps/Guides/Offline_and_background_operation
+No está subida todavía a tu repositorio: debes reemplazar sus archivos con esta entrega. No contiene datos de prueba ni registros personales. La comprobación física en Samsung corresponde a la actualización publicada.
