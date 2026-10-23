@@ -1,0 +1,42 @@
+MI AYUNO 3.0 — ENTREGA Y PRUEBAS
+23 de octubre de 2026
+
+Aplicación estática gratuita, sin dependencias externas, cuentas ni claves API.
+No se recuperó un ZIP 2.0 de la conversación; esta versión se construyó desde cero.
+
+CONTENIDO
+mi-ayuno-3/: archivos completos para publicar. GUIA.html incluye instrucciones de publicación gratuita con GitHub Pages e instalación en Samsung, fuentes, privacidad y límites.
+Los datos de prueba usados en el navegador NO se incluyen en el ZIP: una instalación nueva comienza vacía.
+
+PRUEBAS REALIZADAS
+- Sintaxis de JavaScript comprobada.
+- 9 verificaciones automáticas: fórmulas masculina/femenina, actividad y déficit, proteína, gramos y porciones, tildes y desconocidos, cronómetro, variación educativa, recursos offline, manifiesto e iconos PNG.
+- Navegador: perfil ficticio 80 kg / 175 cm / 30 años / masculino / sedentario: 1749 kcal reposo, 2099 mantenimiento, 1889 objetivo con déficit 10 %, 96 g proteína.
+- 200 g arroz cocido: 260 kcal / 5.4 g proteína. Saldo 1629 kcal.
+- Caminata 30 min: estimación 147 kcal; sin aumentar saldo de comida.
+- Registro de agua y peso visible en diario y gráficos.
+- Ayuno, recarga y persistencia, cambio a alimentación y cierre de ventanas con historial.
+- Copia JSON descargada y restaurada tras confirmación.
+- Servidor detenido: recarga desde service worker y registro de agua exitosos.
+- Actualización del caché y comprobación del texto específico de alimentación.
+- Vista móvil 390 × 844 inspeccionada. Sin errores de consola registrados en la revisión final.
+
+LÍMITES DE VERIFICACIÓN
+No se probó en Samsung físico, no se verificó una instalación Android real ni entrega de notificaciones en el sistema operativo. La app no está publicada en una dirección pública; se entrega lista para publicar con los pasos de GUIA.html. Los avisos requieren permiso y ejecución de la app; no son alarmas fiables cerrada o suspendida. No hay servidor push.
+
+NUTRICIÓN
+Catálogo de 29 alimentos simples con estimaciones orientativas y editables. Desconocidos y recetas requieren valores manuales. No es reconocimiento libre de platos ni IA nutricional. Explicaciones educativas, sin mediciones fisiológicas.
+
+PUBLICACIÓN RÁPIDA
+1. Descomprime el ZIP.
+2. Crea repositorio público mi-ayuno en GitHub.
+3. Sube TODOS los archivos dentro de mi-ayuno-3 a la raíz del repositorio.
+4. Settings > Pages > Deploy from a branch > main > / (root) > Save.
+5. Abre la dirección HTTPS publicada desde Chrome en Samsung.
+6. Menú ⋮ > Añadir a pantalla de inicio > Instalar.
+7. Abre una vez con conexión; después prueba modo avión.
+
+GitHub Pages gratuito para repositorios públicos:
+https://docs.github.com/en/pages/quickstart
+Límites de segundo plano:
+https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps/Guides/Offline_and_background_operation
